@@ -1,6 +1,7 @@
 Inheritance
 
-Aim:To understand and implement various types of inheritance in C++ .
+Aim:
+To understand and implement various types of inheritance in C++ .
 
 Theory:
 Inheritance is a key feature of object-oriented programming (OOP) that allows a new class (derived class) to inherit properties and behaviors (methods) from an existing class (base class). This promotes code reusability and establishes a natural hierarchy between classes.
