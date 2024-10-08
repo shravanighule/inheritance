@@ -1,47 +1,41 @@
-//Multiple inheritance
+//Multilevel inheritance
 #include<iostream>
 #include<string>
 using namespace std;
 
 //Parent Class-1
-class Vehicle 
+class Food 
 {
     public:
-    string company="Ford";
+    string cuisine="Indian";
     void type()
     {
-        cout<<"Mustang"<<endl;
+        cout<<"Asian"<<endl;
     }
 };
-//Parent Class-2
-class Specs 
+//Child Class-1 (derived from parent-1)
+class Dish: public Food 
 {
     public:
-    string mileage="8 kmpl";
-    void colour()
-    {
-        cout<<"Grey and Black"<<endl;
-    }
+    string dish="Biryani";
 };
-//Child Class-1 (derived from parent-1&2)
-class Car: public Vehicle, public Specs 
+//Child Class-2 (derived from child-1)
+class Restaurant: public Dish 
 {
     public:
-    string seater="4 seater";
+    string name="Spice Kitchen";
 };
 
 int main()
 {
-    //Multiple Inheritance
-    Car f1;
-    f1.colour();
-    cout<<f1.company<<" ";
-    f1.type();
-    cout<<"("<<f1.seater<<")"<<endl<<"MILEAGE: "<<f1.mileage<<endl;
+    //Multilevel Inheritance
+    Restaurant f3;
+    f3.type();
+    cout<<f3.cuisine<<": "<<f3.dish<<endl;
+    cout<<"Restaurant: "<<f3.name;
 }
 /*
-Grey and Black
-Ford Mustang
-(4 seater)
-MILEAGE: 8 kmpl
+Asian
+Indian: Biryani
+Restaurant: Spice Kitchen
 */
