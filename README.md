@@ -1,8 +1,8 @@
 Inheritance
-Aim
-To understand and implement various types of inheritance in C++ .
 
-Theory
+Aim:To understand and implement various types of inheritance in C++ .
+
+Theory:
 Inheritance is a key feature of object-oriented programming (OOP) that allows a new class (derived class) to inherit properties and behaviors (methods) from an existing class (base class). This promotes code reusability and establishes a natural hierarchy between classes.
 
 Key Concepts
@@ -13,7 +13,7 @@ Key Concepts
 5.protected: Members are accessible within the class and by derived classes.
 6.private: Members are accessible only within the class.
 Types of Inheritance
-Single Inheritance: A derived class inherits from a single base class.
+1.Single Inheritance: A derived class inherits from a single base class.
 #include<iostream>
 #include<string>
 using namespace std;
@@ -38,7 +38,7 @@ int main(){
     a1.discipline();
     cout<<a1.university+" "+a1.dept;
 }
-Multiple Inheritance: A derived class inherits from more than one base class.
+2.Multiple Inheritance: A derived class inherits from more than one base class.
 #include<iostream>
 #include<string>
 using namespace std;
@@ -79,7 +79,7 @@ int main()
     f1.type();
     cout<<"("<<f1.seater<<")"<<endl<<"MILEAGE: "<<f1.mileage<<endl;
 }
-Multilevel Inheritance: A class is derived from another derived class.
+3.Multilevel Inheritance: A class is derived from another derived class.
 #include<iostream>
 #include<string>
 using namespace std;
@@ -115,7 +115,7 @@ int main()
     cout<<f3.cuisine<<": "<<f3.dish<<endl;
     cout<<"Restaurant: "<<f3.name;
 }
-Hierarchical Inheritance: Multiple classes are derived from a single base class.
+4.Hierarchical Inheritance: Multiple classes are derived from a single base class.
 #include<iostream>
 #include<string>
 using namespace std;
@@ -167,33 +167,34 @@ int main()
     j3.brand();
     cout<<j3.type[2]<<": "<<j3.color<<endl;
 }
-Hybrid Inheritance: A combination of two or more types of inheritance.
-Algorithm
-Single Inheritance
-Class Definition: Uni
+5.Hybrid Inheritance: A combination of two or more types of inheritance.
+
+Algorithm:
+1.Single Inheritance
+.Class Definition: Uni
 Define a class Uni with a public string variable university, initialized to "Symbiosis International University: ".
 Define a public method discipline() that prints "Engineering".
-Class Definition: Department
+.Class Definition: Department
 Define a class Department that inherits publicly from the Uni class.
 In this class, define a public string variable dept, initialized to "Electronics & Communication".
-Main Function:
+.Main Function:
 Create an object a1 of the class Department.
 Call the method discipline() using the object a1, which will print "Engineering".
 Access the university string variable from the Uni class using the a1 object and concatenate it with the dept variable from the Department class.
 Print the concatenated result, which will output: "Symbiosis International University: Electronics & Communication".
-Multiple Inheritance
-Class Definition: Vehicle
+2.Multiple Inheritance
+.Class Definition: Vehicle
 Define a class Vehicle with:
 A public string variable company, initialized to "Ford".
 A public method type() that prints "Mustang".
-Class Definition: Specs
+.Class Definition: Specs
 Define a class Specs with:
 A public string variable mileage, initialized to "8 kmpl".
 A public method colour() that prints "Grey and Black".
-Class Definition: Car (Child Class)
+.Class Definition: Car (Child Class)
 Define a class Car that inherits publicly from both Vehicle and Specs (demonstrating multiple inheritance).
 In this class, define a public string variable seater, initialized to "4 seater".
-Main Function:
+.Main Function:
 Create an object f1 of the class Car.
 Call the colour() method using the object f1, which prints "Grey and Black".
 Access and print the company string variable from the Vehicle class using the f1 object, which will output "Ford".
